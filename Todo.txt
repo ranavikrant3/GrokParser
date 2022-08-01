@@ -1,0 +1,10 @@
+Implement YAML as belows:
+patterns:
+    - pattern1:
+        grok: '%{WORD:Name}'
+        match:
+            - Name: 'Vikrant'
+    - pattern2:
+        grok: '%{WORD:Name}'
+        match:
+            - Name: 'Bob'
