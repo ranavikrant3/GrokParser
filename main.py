@@ -24,16 +24,10 @@ def parse_log(logfile):
                     print('Matched: ',line)
 
 
-
-
 def parse_yaml():
     with open('config.yaml') as f:
         parsed_dict = yaml.safe_load(f)
         return parsed_dict
-
-
-
-
 
 if  __name__ == '__main__':
     parse_log('testfile.log')
