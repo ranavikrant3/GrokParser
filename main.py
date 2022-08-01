@@ -15,12 +15,13 @@ def parse_log(logfile):
         for line in lines:
             grok = Grok(grok_pattern)
             dict_from_grok = grok.match(line)
-            matches = True
-            for field in match_dict:
-                if dict_from_grok[field] != match_dict[field]:
-                    matches = False
-            if matches:
-                print(line)
+            if dict_from_grok:
+                matches = True
+                for field in match_dict:
+                    if dict_from_grok[field] != match_dict[field]:
+                        matches = False
+                if matches:
+                    print('Matched: ',line)
 
 
 

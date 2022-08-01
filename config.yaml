@@ -1,9 +1,10 @@
 ---
 patterns:
   pattern1:
-    grok: "My name is %{WORD:Name}"
+    grok: "My name is %{WORD:Name} and the age is %{NUMBER:age}"
     match:
-      Name: 'Vikrant'
+      Name: 'VikrantRana'
+      age: '26'
   pattern2:
     grok: "My name is %{WORD:Name}"
     match:
