@@ -1,9 +1,9 @@
 ---
 patterns:
   pattern1:
-    grok: "%{WORD:Name}"
+    grok: "My name is %{WORD:Name}"
     match:
-      Name: Vikrant
+      Name: 'Vikrant'
   pattern2:
     grok: "%{WORD:Name}"
     match:
