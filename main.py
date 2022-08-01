@@ -30,4 +30,4 @@ def parse_yaml():
         return parsed_dict
 
 if  __name__ == '__main__':
-    parse_log('testfile.log')
+    parse_log('test.log')

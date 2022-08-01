@@ -9,3 +9,7 @@ patterns:
     grok: "My name is %{WORD:Name}"
     match:
       Name: "Bob"
+  pattern3:
+    grok: "%{DATE:Date} %{TIME:time} %{WORD:Service} %{WORD:LogLevel} %{GREEDYDATA:Query}"
+    match:
+      LogLevel: 'INFO'
