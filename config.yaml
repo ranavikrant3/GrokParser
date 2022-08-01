@@ -5,6 +5,6 @@ patterns:
     match:
       Name: 'Vikrant'
   pattern2:
-    grok: "%{WORD:Name}"
+    grok: "My name is %{WORD:Name}"
     match:
-      Name: Bob
+      Name: "Bob"

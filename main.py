@@ -6,17 +6,20 @@ def parse_log(logfile):
     for pattern in parsed_dict['patterns']:
         grok_pattern = parsed_dict['patterns'][pattern]['grok']
         fields = parsed_dict['patterns'][pattern]['match'].keys()
+        match_dict = {}
         for field in fields:
-
             match_with = parsed_dict['patterns'][pattern]['match'][field]
-            print(field, match_with)
+            match_dict[field] = match_with
         f = open(logfile, 'r')
         lines = f.readlines()
         for line in lines:
             grok = Grok(grok_pattern)
-            matched_grok_dict = grok.match(line)
-            #print(matched_grok_dict)
-            if matched_grok_dict[field] == match_with:
+            dict_from_grok = grok.match(line)
+            matches = True
+            for field in match_dict:
+                if dict_from_grok[field] != match_dict[field]:
+                    matches = False
+            if matches:
                 print(line)
 
 
