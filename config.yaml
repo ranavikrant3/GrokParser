@@ -1,15 +1,6 @@
 ---
 patterns:
-  pattern1:
-    grok: "My name is %{WORD:Name} and the age is %{NUMBER:age}"
-    match:
-      Name: 'VikrantRana'
-      age: '26'
-  pattern2:
-    grok: "My name is %{WORD:Name}"
-    match:
-      Name: "Bob"
-  pattern3:
+  patternforunion:
     grok: "%{DATE:Date} %{TIME:time} %{WORD:Service} %{WORD:LogLevel} %{GREEDYDATA:Query}"
     match:
-      LogLevel: 'INFO'
+      Query: 'UNION'

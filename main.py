@@ -18,7 +18,7 @@ def parse_log(logfile):
             if dict_from_grok:
                 matches = True
                 for field in match_dict:
-                    if dict_from_grok[field] != match_dict[field]:
+                    if match_dict[field] not in dict_from_grok[field]:
                         matches = False
                 if matches:
                     print('Matched: ',line)
