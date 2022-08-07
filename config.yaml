@@ -3,4 +3,4 @@ patterns:
   patternforunion:
     grok: "%{DATE:Date} %{TIME:time} %{WORD:Service} %{WORD:LogLevel} %{GREEDYDATA:Query}"
     match:
-      Query: 'UNION'
+      Query: 'SELECT'

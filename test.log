@@ -4226,3 +4226,8 @@
 2022-08-06 20:55:13 SQLQueryLogger INFO how are you doing?
 2022-08-06 20:56:15 SQLQueryLogger INFO this should not be SQL injection
 2022-08-06 20:59:01 SQLQueryLogger INFO b' ORDER BY 1 --;
+2022-08-06 23:13:15 SQLQueryLogger INFO ' OR 1=1;
+2022-08-06 23:13:22 SQLQueryLogger INFO a' OR 1=1;
+2022-08-06 23:13:30 SQLQueryLogger INFO ' AND 1=1;
+2022-08-06 23:13:37 SQLQueryLogger INFO this should not be SQL injection
+2022-08-06 23:13:53 SQLQueryLogger INFO ' UNION SELECT 1,2,3;
